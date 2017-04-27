@@ -1,8 +1,9 @@
-# Adding cusotm fractions, rather than using auto-detection
+# Adding custom fractions, rather than using auto-detection
 
-## Same project as before (javaee7-simple-sample)
 
 ## Add fractions to the `pom.xml`
+
+Same project as before (javaee7-simple-sample)
 
 ```
 <dependency>
