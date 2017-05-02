@@ -76,3 +76,20 @@ curl  http://localhost:8500/v1/catalog/service/person-service
 ]
 
 ```
+
+## Discovery
+
+```
+@GET
+@Path("lookup")
+public Response get() throws Exception {
+   Map<String, List<Topology.Entry>> services = Topology.lookup().asMap();
+
+   for (String key : services.keySet()) {
+       Topology.Entry entry = services.get(key).get(0);
+       System.out.println(key +" ->" + entry.getAddress()+":"+entry.getPort());
+   }
+
+   return Response.ok().build();
+}
+```
