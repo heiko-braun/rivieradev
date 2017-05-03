@@ -1,0 +1,7 @@
+{
+  "realm": "RivieraDev",
+  "auth-server-url": "http://localhost:9095/auth",
+  "ssl-required": "external",
+  "resource": "curl",
+  "public-client": true
+}
