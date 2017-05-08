@@ -45,10 +45,10 @@ items:
       name: "zipkin-web"
       protocol: "TCP"
       targetPort: 9411
-    - port: 9140
+    - port: 9141
       name: "zipkin-data"
       protocol: "TCP"
-      targetPort: 9410
+      targetPort: 9411
     selector:
       project: "zipkin"
       provider: "fabric8"
@@ -62,7 +62,6 @@ items:
       project: zipkin
       provider: fabric8
   spec:
-    host: zipkin-web-myproject.192.168.64.3.nip.io
     to:
       kind: Service
       name: zipkin
@@ -77,9 +76,8 @@ items:
       project: zipkin
       provider: fabric8
   spec:
-    host: zipkin-data-myproject.192.168.64.3.nip.io
     to:
       kind: Service
-      name: zipkin      
+      name: zipkin
     port:
       targetPort: zipkin-data
